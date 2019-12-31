@@ -14,7 +14,7 @@ after_success:
   - docker build -t georgeobr/multi-server ./server
   - docker build -t georgeobr/multi-worker ./worker
   # login to docker hub
-  - echo "$DOCKER_SECRET" | docker login -u "$DOCKER_ID" --password-s
+  - echo "$DOCKER_SECRET" | docker login -u "$DOCKER_ID"
     # push images to docker hub
   - docker push georgeobr/multi-client
   - docker push georgeobr/multi-nginx
