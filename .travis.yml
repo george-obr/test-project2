@@ -21,4 +21,17 @@ after_success:
   - docker push georgeobr/multi-server
   - docker push georgeobr/multi-worker
 
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "test-ci"
+  env: "TestCi-env"
+  bucket_name: "elasticbeanstalk-us-east-1-861109070356"
+  bucket_path: "test-ci"
+  on:
+    branch: master
+
+  access_key_id: "$AWS_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
+
 
