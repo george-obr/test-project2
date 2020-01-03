@@ -26,7 +26,7 @@
     {
       "name": "nginx",
       "image": "georgeobr/multi-nginx",
-      "essential": false,
+      "essential": true,
       "memory": 128,
       "portMapping": [
         {"hostPort": 80,
